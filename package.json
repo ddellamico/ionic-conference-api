@@ -10,6 +10,7 @@
   "main": "babel.js",
   "scripts": {
     "commit": "git-cz",
+    "push": "git push --follow-tags origin master",
     "clean": "rm -rf dist",
     "start": "node babel.js",
     "babel": "./node_modules/.bin/babel src -d dist --source-maps --copy-files",
@@ -17,7 +18,7 @@
     "dev": "./node_modules/.bin/nodemon --debug -L babel.js --ext 'js json'",
     "debug": "DEBUG=ion-conf-app:* && npm run dev",
     "release": "standard-version --no-verify",
-    "integration-test": "mocha test",
+    "test": "mocha test",
     "lint": "./node_modules/.bin/eslint --cache .",
     "lint:fix": "npm run lint -- --fix",
     "outdated": "npm outdated --depth 0",
