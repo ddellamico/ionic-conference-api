@@ -14,9 +14,9 @@ opts.secretOrKey = config.secret;
 
 export default new passportJwt.Strategy(opts, async(jwt_payload, done) => { // eslint-disable-line
   try {
-    const user = await User.findById(jwt_payload.id);
+    const user = await User.findById(jwt_payload.user._id);
     if (!user) {
-      debug('User not found ==> %s', jwt_payload.id);
+      debug('User not found ==> %s', jwt_payload.user._id);
       return done(null, false);
     }
     if (!user.active) {
