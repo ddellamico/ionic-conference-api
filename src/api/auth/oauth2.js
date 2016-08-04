@@ -35,9 +35,8 @@ const server = oauth2orize.createServer();
  */
 async function generateTokens(user, client) {
   const jwtToken = jwt.sign({
-    id: user._id,
-    username: user.username,
-    iss: 'http://damiendev.com/auth', // iss: "https://YOUR_NAMESPACE",
+    user,
+    iss: 'https://ion-conf-api.damiendev.com', // iss: "https://YOUR_NAMESPACE",
     aud: client._id // aud: "YOUR_CLIENT_ID"
   }, config.secret, { expiresIn: parseInt(config.tokenExpiration, 10) });
 
