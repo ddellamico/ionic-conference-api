@@ -35,7 +35,7 @@ The sole purpose of this app is to provide a simple oAuth2 implementation for [I
   In `development` env, you can set the env variables by doing:
 
   ```
-  cp .env.example .env
+  cp .env.dev.example .env
   ```
 
   and replace the values there.
