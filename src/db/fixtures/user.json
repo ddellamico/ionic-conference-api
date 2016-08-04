@@ -1,0 +1,32 @@
+[
+  {
+    "_id": "5692820f7822e79322d671e1",
+    "firstName": "Damien",
+    "lastName": "Dell'Amico",
+    "username": "damien.dellamico@gmail.com",
+    "password": "test",
+    "active": true,
+    "roles": [
+      "user",
+      "admin"
+    ],
+    "website": "damiendev.com"
+  },
+  {
+    "_id": "56d576d19f73e3c32309636c",
+    "firstName": "Ervin",
+    "lastName": "Howell",
+    "username": "shanna@melissa.tv",
+    "password": "test",
+    "active": true,
+    "website": "anastasia.net"
+  },
+  {
+    "firstName": "Clementine",
+    "lastName": "Bauch",
+    "username": "Nathan@yesenia.net",
+    "password": "test",
+    "active": true,
+    "website": "ramiro.info"
+  }
+]

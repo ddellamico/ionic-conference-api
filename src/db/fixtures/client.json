@@ -1,0 +1,6 @@
+{
+  "name": "Ionic Conference App",
+  "id": "ion-conf-app",
+  "secret": "secret",
+  "trusted": true
+}

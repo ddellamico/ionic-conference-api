@@ -1,0 +1,19 @@
+version: '2'
+services:
+  api:
+    build: .
+    working_dir: /home/app
+    ports:
+      - "3000:3000"
+    command: npm run build
+    environment:
+      NODE_ENV: production
+      MONGO_HOST: mongo_container
+    links:
+      - mongo_container
+  mongo_container:
+    image: mongo:latest
+    command: mongod --smallfiles --quiet --logpath=/dev/null
+    ports:
+     - "27017:27017"
+
