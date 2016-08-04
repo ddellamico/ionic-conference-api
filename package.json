@@ -1,6 +1,6 @@
 {
   "name": "ionic-conference-api",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "RESTful APIs for Ionic Conference App built with koa2",
   "author": {
     "name": "Damien Dell'Amico",
@@ -25,8 +25,8 @@
     "prepush": "npm shrinkwrap",
     "postmerge": "npm install",
     "docker-build": "docker build --no-cache=true -t ddellamico/ion-conf-api .",
-    "docker-tag": "docker tag ddellamico/ion-conf-api ddellamico/ion-conf-api:0.0.1",
-    "docker-push": "docker push ddellamico/ion-conf-api:0.0.1"
+    "docker-tag": "docker tag ddellamico/ion-conf-api:latest ddellamico/ion-conf-api:0.1.1",
+    "docker-push": "docker push ddellamico/ion-conf-api:0.1.1"
   },
   "repository": {
     "type": "git",
