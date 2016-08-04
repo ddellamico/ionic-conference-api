@@ -6,9 +6,7 @@ services:
     ports:
       - "3000:3000"
     command: npm run build
-    environment:
-      NODE_ENV: production
-      MONGO_HOST: mongo_container
+    env_file: .env.prod.example
     links:
       - mongo_container
   mongo_container:
