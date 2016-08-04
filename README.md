@@ -31,9 +31,10 @@ The sole purpose of this app is to provide a simple oAuth2 implementation for [I
   The app should then be running on your docker daemon on port **3000**.
 
   **NOTE:** [dotenv](https://github.com/motdotla/dotenv) is used to manage environment variables from a `.env` file.
-  Place in root project a `.env` file and "overwrite" the default values. In `development` env, you can set the env variables by doing
+  Place in root project a `.env` file and "overwrite" the default values.
+  In `development` env, you can set the env variables by doing:
 
-  ```sh
+  ```
   cp .env.example .env
   ```
 
