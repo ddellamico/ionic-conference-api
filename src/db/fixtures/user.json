@@ -9,8 +9,7 @@
     "roles": [
       "user",
       "admin"
-    ],
-    "website": "damiendev.com"
+    ]
   },
   {
     "_id": "56d576d19f73e3c32309636c",
@@ -18,15 +17,13 @@
     "lastName": "Howell",
     "username": "shanna@melissa.tv",
     "password": "test",
-    "active": true,
-    "website": "anastasia.net"
+    "active": true
   },
   {
     "firstName": "Clementine",
     "lastName": "Bauch",
     "username": "Nathan@yesenia.net",
     "password": "test",
-    "active": true,
-    "website": "ramiro.info"
+    "active": true
   }
 ]

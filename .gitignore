@@ -48,3 +48,6 @@ dist
 .node-gyp
 .npm
 npm-shrinkwrap.json
+
+# apidoc documentation
+docs/

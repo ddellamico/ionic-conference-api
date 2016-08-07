@@ -20,18 +20,81 @@ const router = new Router({
 router.use(authorize());
 
 /**
- * List of schedules.
+ * @api {get} /schedules Get all schedules
+ * @apiVersion 1.0.0
+ * @apiPermission user
+ * @apiName GetSchedules
+ * @apiGroup Schedules
  *
- * @param {Object} ctx The context object
- * @returns {Schedule[]} Return user list
+ * @apiExample Example usage:
+ * curl -X GET -H "Content-Type: application/json" -H "Authorization: Bearer $JWT_TOKEN" "https://ion-conf-api.damiendev.com/api/schedules"
+ *
+ * @apiSuccessExample {json} Success-Response:
+ *     HTTP/1.1 200 OK
+ *     [
+ *      {
+ *        "_id": "57a4c8582901b52c0063f839",
+ *        "date": "2047-05-17T00:00:00.000Z",
+ *        "__v": 0,
+ *        "groups": [
+ *          {
+ *            "time": "8:00 am",
+ *            "_id": "57a4c8582901b52c0063f853",
+ *            "sessions": [
+ *              {
+ *                "name": "Breakfast",
+ *                "description": "Mobile devices and browsers are now advanced...",
+ *                "timeStart": "8:00 am",
+ *                "timeEnd": "9:00 am",
+ *                "_id": "57a4c8582901b52c0063f854",
+ *                "tracks": [
+ *                  "Food"
+ *                ],
+ *                "speakerNames": []
+ *              }
+ *            ]
+ *          }
+ *        ]
+ *      }
+ *     ]
+ *
+ * @apiUse TokenError
  */
 router.get('/', async(ctx) => ctx.body = await Schedule.find({}));
 
+
 /**
- * Find an schedule by id.
+ * @api {get} /schedules/:id Get schedule
+ * @apiVersion 1.0.0
+ * @apiPermission user
+ * @apiName GetSchedule
+ * @apiGroup Schedules
  *
- * @param {Object} ctx The context object
- * @returns {Schedule} the schedule corresponding to the specified id
+ * @apiExample Example usage:
+ * curl -X GET -H "Content-Type: application/json" -H "Authorization: Bearer $JWT_TOKEN" "https://ion-conf-api.damiendev.com/api/schedules/57a4c8582901b52c0063f839"
+ *
+ * @apiSuccessExample {json} Success-Response:
+ *     HTTP/1.1 200 OK
+ *     {
+ *        "_id": "57a4c8582901b52c0063f839",
+ *        "date": "2047-05-17T00:00:00.000Z",
+ *        "__v": 0,
+ *        "groups": [{
+ *            "time": "8:00 am",
+ *            "_id": "57a4c8582901b52c0063f853",
+ *            "sessions": [{
+ *                "name": "Breakfast",
+ *                "description": "Mobile devices and browsers are now advanced...",
+ *                "timeStart": "8:00 am",
+ *                "timeEnd": "9:00 am",
+ *                "_id": "57a4c8582901b52c0063f854",
+ *                "tracks": ["Food"]
+ *                "speakerNames": []
+ *            }]
+ *          }]
+ *     }
+ *
+ * @apiUse TokenError
  */
 router.get('/:id', objectIdConstraint(),
   async(ctx) => ctx.body = await Schedule.findById(ctx.params.id));

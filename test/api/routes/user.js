@@ -7,10 +7,10 @@
 'use strict';
 
 const user = {
-  firstName: 'firstName',
-  lastName: 'lastName',
-  username: 'test@gmail.com',
-  password: 'test'
+  firstName: 'Trey',
+  lastName: 'Azagthoth',
+  username: 'azagthoth@morbidangel.com',
+  password: 'rapture'
 };
 
 export default function (request, context) {

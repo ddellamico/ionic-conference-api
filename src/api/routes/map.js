@@ -20,18 +20,52 @@ const router = new Router({
 router.use(authorize());
 
 /**
- * List of markers.
+ * @api {get} /maps Get all markers
+ * @apiVersion 1.0.0
+ * @apiPermission user
+ * @apiName GetMarkers
+ * @apiGroup Map
  *
- * @param {Object} ctx The context object
- * @returns {Speaker[]} Return user list
+ * @apiExample Example usage:
+ * curl -X GET -H "Content-Type: application/json" -H "Authorization: Bearer $JWT_TOKEN" "https://ion-conf-api.damiendev.com/api/maps"
+ *
+ * @apiSuccessExample {json} Success-Response:
+ *     HTTP/1.1 200 OK
+ *     [
+ *      {
+ *        "_id":"57a4c8582901b52c0063f835",
+ *        "name":"Monona Terrace Convention Center",
+ *        "lat":43.071584,
+ *        "lng":-89.38012,
+ *        "center":true
+ *      }
+ *     ],
+ *
+ * @apiUse TokenError
  */
 router.get('/', async(ctx) => ctx.body = await Map.find({}));
 
 /**
- * Find a marker by id.
+ * @api {get} /maps/:id Get marker
+ * @apiVersion 1.0.0
+ * @apiPermission user
+ * @apiName GetMarker
+ * @apiGroup Map
  *
- * @param {Object} ctx The context object
- * @returns {Speaker} the map corresponding to the specified id
+ * @apiExample Example usage:
+ * curl -X GET -H "Content-Type: application/json" -H "Authorization: Bearer $JWT_TOKEN" "https://ion-conf-api.damiendev.com/api/maps/57a4c8582901b52c0063f835"
+ *
+ * @apiSuccessExample {json} Success-Response:
+ *     HTTP/1.1 200 OK
+ *     {
+ *        "_id":"57a4c8582901b52c0063f835",
+ *        "name":"Monona Terrace Convention Center",
+ *        "lat":43.071584,
+ *        "lng":-89.38012,
+ *        "center":false
+ *     },
+ *
+ * @apiUse TokenError
  */
 router.get('/:id', objectIdConstraint(),
   async(ctx) => ctx.body = await Map.findById(ctx.params.id));

@@ -7,16 +7,32 @@
   "rules": {
     "strict": 0,
     "no-underscore-dangle": 0,
-    "comma-dangle": [2, "never"],
-    "eol-last": 1, // enforce newline at the end of file, with no multiple empty lines
-    "no-param-reassign": [2, { "props": false }],
+    "comma-dangle": [
+      2,
+      "never"
+    ],
+    "eol-last": 1,
+    // enforce newline at the end of file, with no multiple empty lines
+    "no-param-reassign": [
+      2,
+      {
+        "props": false
+      }
+    ],
     "consistent-return": "warn",
     "prefer-template": "warn",
     "no-return-assign": 0,
     "arrow-body-style": 0,
     "object-shorthand": 0,
     "spaced-comment": 0,
-    "global-require": 0
+    "global-require": 0,
+    "max-len": [
+      "error",
+      {
+        "code": 120,
+        "ignoreComments": true
+      }
+    ]
   },
   "extends": "airbnb/base"
 }

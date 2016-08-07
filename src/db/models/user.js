@@ -46,13 +46,6 @@ const UserSchema = new mongoose.Schema({
     required: true,
     default: true
   },
-  website: {
-    type: String,
-    validate: validate({
-      validator: 'isURL',
-      message: 'Invalid website'
-    })
-  },
   password: {
     type: String,
     required: true
@@ -84,6 +77,7 @@ const UserSchema = new mongoose.Schema({
       delete ret.password;
       delete ret.salt;
       delete ret.active;
+      delete ret.provider;
     }
   }
 });

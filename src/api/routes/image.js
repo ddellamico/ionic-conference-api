@@ -13,18 +13,54 @@ const router = new Router({
 router.use(authorize());
 
 /**
- * List of images.
+ * @api {get} /images Get all images
+ * @apiVersion 1.0.0
+ * @apiPermission user
+ * @apiName GetImages
+ * @apiGroup Images
  *
- * @param {Object} ctx The context object
- * @returns {Image[]} Return user list
+ * @apiExample Example usage:
+ * curl -X GET -H "Content-Type: application/json" -H "Authorization: Bearer $JWT_TOKEN" "https://ion-conf-api.damiendev.com/api/images"
+ *
+ * @apiSuccessExample {json} Success-Response:
+ *     HTTP/1.1 200 OK
+ *     [
+ *      {
+ *        "_id":"56d5748b094d7cfd49b36533",
+ *        "user":"5692820f7822e79322d671e1",
+ *        "url":"http://lorempixel.com/400/200/animals/",
+ *        "description":"Duis tempor non elit id.",
+ *        "__v":0,
+ *        "tags":["enim","velit","pariatur","ex","velit","id","aute"]
+ *       }
+ *     ]
+ *
+ * @apiUse TokenError
  */
 router.get('/', async(ctx) => ctx.body = await Image.find({}));
 
 /**
- * Find an image by id.
+ * @api {get} /images/:id Get image
+ * @apiVersion 1.0.0
+ * @apiPermission user
+ * @apiName GetImage
+ * @apiGroup Images
  *
- * @param {Object} ctx The context object
- * @returns {Image} the image corresponding to the specified id
+ * @apiExample Example usage:
+ * curl -X GET -H "Content-Type: application/json" -H "Authorization: Bearer $JWT_TOKEN" "https://ion-conf-api.damiendev.com/api/images/56d5748b094d7cfd49b36533"
+ *
+ * @apiSuccessExample {json} Success-Response:
+ *     HTTP/1.1 200 OK
+ *     {
+ *        "_id":"56d5748b094d7cfd49b36533",
+ *        "user":"5692820f7822e79322d671e1",
+ *        "url":"http://lorempixel.com/400/200/animals/",
+ *        "description":"Duis tempor non elit id.",
+ *        "__v":0,
+ *        "tags":["enim","velit","pariatur","ex","velit","id","aute"]
+ *     }
+ *
+ * @apiUse TokenError
  */
 router.get('/:id', objectIdConstraint(),
   async(ctx) => ctx.body = await Image.findById(ctx.params.id));

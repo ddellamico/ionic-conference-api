@@ -20,18 +20,54 @@ const router = new Router({
 router.use(authorize());
 
 /**
- * List of speakers.
+ * @api {get} /speakers Get all speakers
+ * @apiVersion 1.0.0
+ * @apiPermission user
+ * @apiName GetSpeakers
+ * @apiGroup Speakers
  *
- * @param {Object} ctx The context object
- * @returns {Speaker[]} Return user list
+ * @apiExample Example usage:
+ * curl -X GET -H "Content-Type: application/json" -H "Authorization: Bearer $JWT_TOKEN" "https://ion-conf-api.damiendev.com/api/speakers"
+ *
+ * @apiSuccessExample {json} Success-Response:
+ *     HTTP/1.1 200 OK
+ *     [
+ *      {
+ *        "_id":"57a4c8582901b52c0063f855",
+ *        "name":"Eric Bobbitt",
+ *        "profilePic":"https://avatars3.githubusercontent.com/u/19638?v=3",
+ *        "twitter":"ericbobbitt",
+ *        "about":"When he's not arguing semantics, dancing at all the wrong times...",
+ *        "location":"Madison, WI",
+ *      }
+ *     ]
+ *
+ * @apiUse TokenError
  */
 router.get('/', async(ctx) => ctx.body = await Speaker.find({}));
 
 /**
- * Find an speaker by id.
+ * @api {get} /speakers/:id Get speaker
+ * @apiVersion 1.0.0
+ * @apiPermission user
+ * @apiName GetSpeaker
+ * @apiGroup Speakers
  *
- * @param {Object} ctx The context object
- * @returns {Speaker} the speaker corresponding to the specified id
+ * @apiExample Example usage:
+ * curl -X GET -H "Content-Type: application/json" -H "Authorization: Bearer $JWT_TOKEN" "https://ion-conf-api.damiendev.com/api/speakers/57a4c8582901b52c0063f855"
+ *
+ * @apiSuccessExample {json} Success-Response:
+ *     HTTP/1.1 200 OK
+ *     {
+ *        "_id":"57a4c8582901b52c0063f855",
+ *        "name":"Eric Bobbitt",
+ *        "profilePic":"https://avatars3.githubusercontent.com/u/19638?v=3",
+ *        "twitter":"ericbobbitt",
+ *        "about":"When he's not arguing semantics, dancing at all the wrong times...",
+ *        "location":"Madison, WI",
+ *     }
+ *
+ * @apiUse TokenError
  */
 router.get('/:id', objectIdConstraint(),
   async(ctx) => ctx.body = await Speaker.findById(ctx.params.id));
