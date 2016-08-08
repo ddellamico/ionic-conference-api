@@ -19,7 +19,7 @@
     "build": "npm run clean && npm run docs && npm run babel && node ./dist",
     "dev": "./node_modules/.bin/nodemon --debug -L babel.js --ext 'js json'",
     "debug": "DEBUG=ion-conf-app:* && npm run dev",
-    "test": "mocha test",
+    "test": "mocha test --timeout 6000",
     "lint": "./node_modules/.bin/eslint --cache .",
     "outdated": "npm outdated --depth 0",
     "docker-build": "docker build --no-cache=true -t ddellamico/ion-conf-api .",
