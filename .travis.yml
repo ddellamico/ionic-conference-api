@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+  - "4.4"
+  - "6.3"
+services:
+  - mongodb
+env:
+  - NODE_ENV=TEST
+  - MONGO_DB_NAME=ionic-conference-test
+cache:
+  directories:
+  - node_modules
+git:
+  depth: 3
