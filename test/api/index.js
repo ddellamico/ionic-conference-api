@@ -6,7 +6,6 @@
 
 'use strict';
 
-import 'dotenv/config';
 import supertest from 'supertest-as-promised';
 import chai from 'chai';
 import importDir from 'import-dir';

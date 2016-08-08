@@ -9,4 +9,5 @@
 require('babel-register');
 require('babel-polyfill');
 require('source-map-support').install();
+require('dotenv').config({ silent: true });
 require('./api');
