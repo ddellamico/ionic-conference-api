@@ -38,6 +38,7 @@ log.debug(banner);
   }
 
   const app = require('./server').app;
+
   app.listen(config.server.port, () => {
     log.debug(`App started on port ${config.server.port} with environment ${config.environment}`);
   });

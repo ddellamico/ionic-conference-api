@@ -8,9 +8,10 @@
 
 import Koa from 'koa';
 import logger from 'koa-logger';
+import mount from 'koa-mount';
+import serve from 'koa-static';
 import api from './api';
 import middleware from './middleware';
-import mount from 'koa-mount';
 import config from './config';
 
 const app = new Koa();
@@ -19,5 +20,6 @@ if (config.environment === 'development') {
 }
 app.use(middleware());
 app.use(mount(api));
+app.use(serve(`${process.cwd()}/docs`));
 
 export { app };

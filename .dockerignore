@@ -24,3 +24,4 @@ CHANGELOG.md
 docker-compose.yml
 Vagrantfile
 dist/
+docs/
