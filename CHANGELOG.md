@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.2.1"></a>
+## [0.2.1](https://github.com/ddellamico/ionic-conference-api/compare/v0.2.0...v0.2.1) (2016-08-08)
+
+
+### Bug Fixes
+
+* **app:** fix docs serving ([099450a](https://github.com/ddellamico/ionic-conference-api/commit/099450a))
+
+
+
 <a name="0.2.0"></a>
 # [0.2.0](https://github.com/ddellamico/ionic-conference-api/compare/v0.1.2...v0.2.0) (2016-08-07)
 
