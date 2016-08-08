@@ -41,7 +41,7 @@ process.on('SIGINT', () => {
 export function connectDb(dbURI) {
   return new Promise((resolve, reject) => {
     // create the database connection
-    mongoose.connect(dbURI);
+    mongoose.connect(dbURI, { server: { socketOptions: { keepAlive: 1 } } });
 
     mongoose.connection
       .on('error', (err) => {
