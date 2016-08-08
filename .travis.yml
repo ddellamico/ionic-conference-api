@@ -1,5 +1,4 @@
 sudo: required
-dist: trusty
 language: node_js
 node_js:
   - "6.3"
@@ -8,5 +7,12 @@ services:
 env:
   - NODE_ENV=test
   - DEBUG=ion-conf-app:*
+  - CXX=g++-4.8
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++-4.8
 git:
   depth: 3

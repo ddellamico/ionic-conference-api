@@ -45,7 +45,7 @@ export function connectDb(dbURI) {
 
     mongoose.connection
       .on('error', (err) => {
-        debug('Mongoose connection error: %s', err.message);
+        debug('Mongoose connection error: ', err.message);
         reject(err);
       })
       .on('close', (err) => debug('Mongoose connection error %', err))
