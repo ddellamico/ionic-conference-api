@@ -1,4 +1,3 @@
-sudo: required
 dist: trusty
 language: node_js
 node_js:
@@ -7,8 +6,5 @@ services:
   - mongodb
 env:
   - NODE_ENV=TEST
-cache:
-  directories:
-  - node_modules
 git:
   depth: 3
