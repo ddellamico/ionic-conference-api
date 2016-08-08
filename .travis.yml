@@ -6,9 +6,7 @@ node_js:
 services:
   - mongodb
 env:
-  - NODE_ENV=TEST
-before_script:
-  - sleep 15
-  - mongo ionic-conference-test --eval 'db.addUser("travis", "test");'
+  - NODE_ENV=test
+  - DEBUG=ion-conf-app:*
 git:
   depth: 3
