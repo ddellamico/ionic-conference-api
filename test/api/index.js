@@ -30,7 +30,7 @@ const authUser = {
 
 describe('Auth', () => {
   before(async() => {
-    const dbURI = `mongodb://${config.db.host}:${config.db.port}/${config.db.nameTest}`;
+    const dbURI = 'mongodb://localhost/ionic-conference-test';
     try {
       await connectDb(dbURI);
     } catch (ex) {
