@@ -1,5 +1,5 @@
 sudo: required
-
+dist: trusty
 language: node_js
 
 node_js:
@@ -10,7 +10,7 @@ services:
 
 before_install:
   - docker pull mongo:latest
-  - docker run -d -p 127.0.0.1:27017:27017 --name ICA-DB mongo:latest
+  - docker run -d -p 127.0.0.1:27017:27017 mongo:latest
   - docker ps
 
 git:
