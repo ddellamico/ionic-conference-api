@@ -1,18 +1,22 @@
 sudo: required
-language: node_js
-node_js:
-  - "6.3"
 services:
-  - mongodb
+  - docker
+
 env:
+  - COMPOSE_VERSION=1.7.0
   - NODE_ENV=test
-  - DEBUG=ion-conf-app:*
-  - CXX=g++-4.8
-addons:
-  apt:
-    sources:
-      - ubuntu-toolchain-r-test
-    packages:
-      - g++-4.8
+
+before_install:
+ - curl -L https://github.com/docker/compose/releases/download/${COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
+ - chmod +x docker-compose
+ - sudo mv docker-compose /usr/local/bin
+
+script:
+  - docker version
+  - docker-compose version
+  - docker-compose -f docker-compose.test.yml up --build
+
+after_script:
+  - docker-compose -f docker-compose.test.yml down
 git:
   depth: 3

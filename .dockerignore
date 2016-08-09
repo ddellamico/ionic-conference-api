@@ -1,5 +1,4 @@
 node_modules
-test
 
 .idea/
 .settings
@@ -8,8 +7,6 @@ logs/*.log
 .git/
 .env
 .gitignore
-.eslintignore
-.eslintrc
 .npmignore
 .bash_history
 .cache

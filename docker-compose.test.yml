@@ -1,0 +1,17 @@
+version: '2'
+services:
+  api:
+    build: .
+    working_dir: /home/app
+    ports:
+      - "3000:3000"
+    command: npm test
+    env_file: .env.dev.example
+    links:
+      - mongo_container
+  mongo_container:
+    image: mongo:latest
+    command: mongod --smallfiles --quiet --logpath=/dev/null
+    ports:
+     - "27017:27017"
+
