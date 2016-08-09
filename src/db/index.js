@@ -45,13 +45,13 @@ export function connectDb(dbURI) {
 
     mongoose.connection
       .on('error', (err) => {
-        debug('Mongoose connection error: ', err.message);
+        log.error('Mongoose connection error: ', err.message);
         reject(err);
       })
-      .on('close', (err) => debug('Mongoose connection error %', err))
+      .on('close', (err) => log.error('Mongoose connection error', err))
       .once('open', () => resolve(mongoose.connections[0]))
       .on('connected', () => {
-        debug('Mongoose connected to', dbURI);
+        log.debug('Mongoose connected to', dbURI);
       });
   });
 }
