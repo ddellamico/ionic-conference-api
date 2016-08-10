@@ -1,5 +1,6 @@
-RESTful APIs for Ionic Conference App
-=====================================
+#RESTful APIs for Ionic Conference App
+
+[![Build Status](https://travis-ci.org/ddellamico/ionic-conference-api.svg?branch=master)](https://travis-ci.org/ddellamico/ionic-conference-api) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square)](http://commitizen.github.io/cz-cli/) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 RESTful APIs for [Ionic Conference App](https://github.com/ddellamico/ionic-conference-app) application.
 The sole purpose of this app is to provide a simple oAuth2 implementation for [Ionic Conference App](https://github.com/ddellamico/ionic-conference-app).
@@ -17,7 +18,7 @@ The sole purpose of this app is to provide a simple oAuth2 implementation for [I
 
 ## Requirements
 
-* [NodeJs](http://nodejs.org) >= 6.x
+* [NodeJs](http://nodejs.org) >= 5.x
 * [Docker](https://www.docker.com/products/docker) and [Docker compose](https://docs.docker.com/compose)
 
 ## Install
