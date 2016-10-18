@@ -12,7 +12,7 @@ import fs from 'fs';
 
 winston.emitErrs = true;
 
-const getFilePath = m => m.filename.split('/').slice(-2).join('/');
+const getFilePath = m => m.filename.split(path.sep).slice(-2).join(path.sep);
 
 const dirLog = path.join(process.cwd(), 'logs');
 
