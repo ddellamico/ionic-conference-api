@@ -110,10 +110,6 @@ server.exchange(oauth2orize.exchange.refreshToken(async(client, refreshToken, sc
 export function token() {
   return compose([
     passport.authenticate(['basic', 'clientPassword'], { session: false }),
-    async(ctx, next) => {
-      ctx.state.user = ctx.passport.user;
-      await next();
-    },
     server.token(),
     server.errorHandler()
   ]);

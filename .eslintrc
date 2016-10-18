@@ -6,7 +6,10 @@
   },
   "rules": {
     "strict": 0,
+    "arrow-parens": 0,
+    "generator-star-spacing": 0,
     "no-underscore-dangle": 0,
+    "import/prefer-default-export": 0,
     "comma-dangle": [
       2,
       "never"
