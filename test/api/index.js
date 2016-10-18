@@ -8,10 +8,11 @@
 
 import supertest from 'supertest-as-promised';
 import chai from 'chai';
+import _debug from 'debug';
 import importDir from 'import-dir';
 import config from '../../src/config';
 import { connectDb, loadFixtures } from '../../src/db';
-import _debug from 'debug';
+
 const debug = _debug('ion-conf-app:db');
 
 chai.should();

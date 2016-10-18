@@ -12,8 +12,8 @@ import jwt from 'jsonwebtoken';
 import oauth2orize from 'oauth2orize-koa';
 import compose from 'koa-compose';
 import uuid from 'node-uuid';
-import logger from '../../utils/logger';
 import _debug from 'debug';
+import logger from '../../utils/logger';
 import config from './config';
 
 const debug = _debug('ion-conf-app:auth.oauth2');

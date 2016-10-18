@@ -4,6 +4,7 @@ import mongoose from 'mongoose';
 import Router from 'koa-router';
 import { authorize } from '../auth/oauth2';
 import { objectIdConstraint } from '../../middleware/route-constraints';
+
 const Image = mongoose.model('Image');
 
 const router = new Router({

@@ -9,9 +9,9 @@
 import Koa from 'koa';
 import passport from 'koa-passport';
 import Router from 'koa-router';
+import importDir from 'import-dir';
 import auth from './auth';
 import { token } from './auth/oauth2';
-import importDir from 'import-dir';
 
 const app = new Koa();
 app.use(auth(passport));

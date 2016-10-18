@@ -12,6 +12,9 @@ const SessionItemSchema = new mongoose.Schema({
   name: {
     type: String
   },
+  location: {
+    type: String
+  },
   description: {
     type: String
   },

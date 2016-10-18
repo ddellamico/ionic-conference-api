@@ -9,8 +9,8 @@
 import mongoose from 'mongoose';
 import Promise from 'bluebird';
 import importDir from 'import-dir';
-import _log from '../utils/logger';
 import _debug from 'debug';
+import _log from '../utils/logger';
 
 const log = _log(module);
 const debug = _debug('ion-conf-app:db');
