@@ -30,7 +30,7 @@ const RefreshTokenSchema = new mongoose.Schema({
   }
 });
 
-RefreshTokenSchema.pre('validate', async function preValidate(next) {
+RefreshTokenSchema.pre('validate', function preValidate(next) {
   if (this.isNew) {
     try {
       this.token = this.constructor.encryptToken(this.token);
