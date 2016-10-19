@@ -8,8 +8,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Bug Fixes
 
-* **eslint:** fix eslint errors ([2f99a5c](https://github.com/ddellamico/ionic-conference-api/commit/2f99a5c))
-* **eslint:** fix eslint errors ([44fed0d](https://github.com/ddellamico/ionic-conference-api/commit/44fed0d))
+* **eslint:** fix eslint errors ([2f99a5c](https://github.com/ddellamico/ionic-conference-api/commit/2f99a5c), [44fed0d](https://github.com/ddellamico/ionic-conference-api/commit/44fed0d))
 * **logger:** cross-platform support in file paths ([a98a979](https://github.com/ddellamico/ionic-conference-api/commit/a98a979))
 
 
