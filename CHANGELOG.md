@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.2.2"></a>
+## [0.2.2](https://github.com/ddellamico/ionic-conference-api/compare/v0.2.1...v0.2.2) (2016-10-19)
+
+
+### Bug Fixes
+
+* **eslint:** fix eslint errors ([2f99a5c](https://github.com/ddellamico/ionic-conference-api/commit/2f99a5c))
+* **eslint:** fix eslint errors ([44fed0d](https://github.com/ddellamico/ionic-conference-api/commit/44fed0d))
+* **logger:** cross-platform support in file paths ([a98a979](https://github.com/ddellamico/ionic-conference-api/commit/a98a979))
+
+
+
 <a name="0.2.1"></a>
 ## [0.2.1](https://github.com/ddellamico/ionic-conference-api/compare/v0.2.0...v0.2.1) (2016-08-08)
 

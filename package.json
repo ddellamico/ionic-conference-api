@@ -1,6 +1,6 @@
 {
   "name": "ionic-conference-api",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "RESTful APIs for Ionic Conference App built with koa2",
   "author": {
     "name": "Damien Dell'Amico",
