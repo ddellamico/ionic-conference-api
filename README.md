@@ -1,6 +1,7 @@
 #RESTful APIs for Ionic Conference App
 
 [![Build Status](https://travis-ci.org/ddellamico/ionic-conference-api.svg?branch=master)](https://travis-ci.org/ddellamico/ionic-conference-api) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square)](http://commitizen.github.io/cz-cli/) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+[![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT) [![Dependency Status](https://david-dm.org/ddellamico/ionic-conference-api.svg)](https://david-dm.org/ddellamico/ionic-conference-api) [![devDependency Status](https://david-dm.org/ddellamico/ionic-conference-api/dev-status.svg)](https://david-dm.org/ddellamico/ionic-conference-api#info=devDependencies)
 
 RESTful APIs for [Ionic Conference App](https://github.com/ddellamico/ionic-conference-app) application.
 The sole purpose of this app is to provide a simple oAuth2 implementation for [Ionic Conference App](https://github.com/ddellamico/ionic-conference-app).
