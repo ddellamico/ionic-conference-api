@@ -32,6 +32,9 @@ export default function (request, context) {
       schedules[0].should.have.property('_id');
       schedules[0].should.have.property('date');
       schedules[0].should.have.property('groups');
+      schedules[0].groups[0].should.have.property('time');
+      schedules[0].groups[0].sessions[0].should.have.property('name');
+      schedules[0].groups[0].sessions[0].should.have.property('location');
     });
   });
 }
