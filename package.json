@@ -22,6 +22,7 @@
     "test": "mocha test --timeout 6000",
     "lint": "./node_modules/.bin/eslint --cache .",
     "outdated": "npm outdated --depth 0",
+    "docker-publish": "npm run docker-build && npm run docker-tag && npm run docker-push",
     "docker-build": "docker build --no-cache=true -t ddellamico/ion-conf-api .",
     "docker-tag": "docker tag ddellamico/ion-conf-api:latest ddellamico/ion-conf-api:0.2.2",
     "docker-push": "docker push ddellamico/ion-conf-api:0.2.2"
@@ -94,6 +95,7 @@
   },
   "devDependencies": {
     "apidoc": "^0.16.1",
+    "babel-cli": "6.16.0",
     "babel-core": "6.17.0",
     "babel-eslint": "^6.1.2",
     "babel-preset-es2015-node6": "0.3.0",
