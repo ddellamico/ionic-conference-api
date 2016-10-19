@@ -23,8 +23,8 @@
     "lint": "./node_modules/.bin/eslint --cache .",
     "outdated": "npm outdated --depth 0",
     "docker-build": "docker build --no-cache=true -t ddellamico/ion-conf-api .",
-    "docker-tag": "docker tag ddellamico/ion-conf-api:latest ddellamico/ion-conf-api:0.2.1",
-    "docker-push": "docker push ddellamico/ion-conf-api:0.2.1"
+    "docker-tag": "docker tag ddellamico/ion-conf-api:latest ddellamico/ion-conf-api:0.2.2",
+    "docker-push": "docker push ddellamico/ion-conf-api:0.2.2"
   },
   "repository": {
     "type": "git",
